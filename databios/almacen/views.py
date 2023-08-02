@@ -1,7 +1,10 @@
 from django.shortcuts import render
 from .models import product
-
 def homeView(request):
+    return render(request, 'index.html')
+
+
+def catalogo(request):
     obj = product.objects.all()
     categorias = []
     for producto in obj:
@@ -11,7 +14,7 @@ def homeView(request):
       'productos': obj,
       'categorias': categorias,
     }
-    return render(request, 'index.html', context)
+    return render(request, '<pagina catalogo>.html', context)
 
 def filtroCategoria(request):
     categoria = request.GET.get('categoria')

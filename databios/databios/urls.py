@@ -1,11 +1,11 @@
 from django.contrib import admin
 from django.urls import path
-from almacen.views import homeView,filtroCategoria
+from almacen.views import homeView,catalogo
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', homeView, name='Homeview'),
-    path('filtroCategoria/',filtroCategoria, name='productos'),
+    path('', catalogo, name='Homeview'),
+    path('catalogo/', catalogo, name='productos'),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)   

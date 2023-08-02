@@ -100,4 +100,12 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
+EMAIL_HOST = 'smtp.gmail.com' # Servidor de gmail
+EMAIL_PORT = 587
+
+EMAIL_HOST_USER ='databios2023@gmail.com'
+EMAIL_HOST_PASSWORD = 'gtnjvkvnwjngjwhl' # Contraseña de aplicacion
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

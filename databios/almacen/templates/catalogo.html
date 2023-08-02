@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'javascript/filter.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <select id = "opcion"  class = "" onchange="obtenerSelect(this)">
+        <option class = "" onclick="">Todos</button>
+        {% for categoria in categorias %}
+            <option class = "" onclick="">{{ categoria.nombre }}</button>
+        {% endfor %} 
+    </select>
+    <h1>HOLA GENTE</h1>
+    <div class="content"></div>
+
+</body>
+</html>

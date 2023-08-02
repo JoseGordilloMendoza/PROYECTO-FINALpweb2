@@ -1,5 +1,5 @@
 # PROYECTO-FINALpweb2
-## Jose Alonzo Gordillo 
-## Ower Lopez Arela
 ## Rommel Chambi
+## Ower Lopez
+## Jose Gordillo
 ## ALejandro Phocco

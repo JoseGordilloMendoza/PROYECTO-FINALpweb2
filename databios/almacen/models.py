@@ -5,8 +5,8 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nombre
     
-class product(models.Model):
-    categoria = models.ManyToManyField(Categoria)
+class Product(models.Model):
+    categorias = models.ManyToManyField(Categoria)
     nombre= models.TextField()
     descripcion = models.TextField()
     precio = models.IntegerField()

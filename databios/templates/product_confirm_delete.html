@@ -1,0 +1,8 @@
+<!-- product_confirm_delete.html -->
+<h2>Confirmar eliminación</h2>
+<p>¿Estás seguro de que deseas eliminar el producto "{{ object.nombre }}"?</p>
+
+<form method="post">
+  {% csrf_token %}
+  <input type="submit" value="Eliminar">
+</form>

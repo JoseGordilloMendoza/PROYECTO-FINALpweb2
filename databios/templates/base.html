@@ -36,7 +36,12 @@
                     <i class="fas fa-user"></i>
                     <div class="user-info">
                         <span class="user-greeting">HOLA</span>
-                        <a href="http://127.0.0.1:8000/login/" class="login-button">Iniciar Sesión</a>
+                        <a href="http://127.0.0.1:8000/login/" class="login-button">Login</a>
+                        <a href="http://127.0.0.1:8000/register/" class="login-button">Register</a>
+                        <a href="http://127.0.0.1:8000/logout/" class="login-button">logout
+
+                            
+                        </a>
                     </div>
                 </div>
                 {% if user.is_authenticated %}
@@ -48,10 +53,12 @@
                 {% endif %}
                 {% if user.is_superuser %}
                     <!-- Aquí va el contenido que deseas mostrar si el usuario es un superusuario -->
-                    <p>Bienvenido, Superusuario {{ user.username }}!</p>
-                {% else %}
-                    <!-- Aquí va el contenido que deseas mostrar si el usuario no es un superusuario -->
-                    <p>No tienes acceso a esta área.</p>
+                    <p><strong> Superusuario {{ user.username }}</strong></p>
+                {% endif %}
+                {% if user.is_superuser %}
+                <a href="http://127.0.0.1:8000/product/create/" class="login-button">Crear producto</a>
+                <a href="http://127.0.0.1:8000/product/list/" class="login-button">Editar producto</a>
+                <a href="http://127.0.0.1:8000/product/delete/list/" class="login-button">Eliminar producto</a>
                 {% endif %}
                 <div class="cart">
                     <i class="fas fa-shopping-cart"></i>

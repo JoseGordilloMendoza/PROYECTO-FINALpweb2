@@ -1,0 +1,12 @@
+<h1>ELIGE EL PRODUCTO A ELIMINAR</h1>
+
+   <ul>
+    {% for product in products %}
+      <li>
+        {{ product.nombre }}
+        <a href="{% url 'product_delete' product.pk %}">Eliminar</a>
+      </li>
+    {% endfor %}
+    <a href="http://127.0.0.1:8000/">Inicio</a>
+  </ul>
+  

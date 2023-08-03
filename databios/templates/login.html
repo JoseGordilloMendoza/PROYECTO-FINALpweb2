@@ -4,11 +4,19 @@
     <title>Iniciar sesión</title>
 </head>
 <body>
-    <h1>Iniciar sesión</h1>
-    <form method="post">
+
+    <h1 class="titLoginRegister" align="center">INGRESAR</h1>
+
+    <form action="/login/" method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Iniciar sesión">
+        <input type="text" name="username" placeholder="Usuario"><br>
+        <input type="password" name="password" placeholder="Contraseña"><br>
+        <input type="Submit" value="Sign in">
     </form>
-</body>
+
+    <div>
+            {% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
+    </div>
 </html>

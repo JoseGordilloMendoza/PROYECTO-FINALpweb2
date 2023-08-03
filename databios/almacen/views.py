@@ -23,3 +23,6 @@ def filtroCategoria(request):
         'productos': productos
     }
     return render(request, 'categorias.html', context)
+
+def inicioView(request):
+    return render(request, 'inicio.html')

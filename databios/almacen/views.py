@@ -22,7 +22,7 @@ def filtroCategoria(request):
     context = {
         'productos': productos
     }
-    return render(request, 'categorias.html', context)
+    return render(request, 'catalogo.html', context)
 
 def inicioView(request):
     return render(request, 'inicio.html')

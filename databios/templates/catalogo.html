@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}@DataBios.{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/catalogo.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <aside class="sidebar">
+        <header>
+            <h1>Tienda de Útiles Escolares y de Oficina</h1>
+        </header>
+        <p>Filtrar por categoría:</p>
+        <select id="opcion" onchange="obtenerSelect(this)">
+            <option value="Todos">Todos</option>
+            {% for categoria in categorias %}
+                <option value="{{ categoria.nombre }}">{{ categoria.nombre }}</option>
+            {% endfor %} 
+        </select>
+    </aside>
+    <main class="products-container">
+        {% for obj in productos %}
+            <div class="product">
+                <div class="img-container">
+                    <img src='{{ obj.imagen.url }}' alt='{{ obj.nombre }}' class="product-image">
+                </div>
+                <h1 class="product-title">{{ obj.nombre }}</h1>
+                <h2 class="product-description">{{ obj.descripcion }}</h2>
+                <h2>Stock: {{ obj.stock }}</h2>
+                <h1 class="product-price">Precio: S/{{ obj.precio }}</h1>
+                <button class="buy-button">COMPRAR</button>
+            </div>
+        {% endfor %}
+    </main>
+</div>
+
+{% endblock %}

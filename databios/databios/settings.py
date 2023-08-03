@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'almacen',
+    'account'
 ]
 
 MIDDLEWARE = [
@@ -107,5 +108,7 @@ EMAIL_HOST_USER ='databios2023@gmail.com'
 EMAIL_HOST_PASSWORD = 'gtnjvkvnwjngjwhl' # Contraseña de aplicacion
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+
+AUTH_USER_MODEL = 'account.CustomUser'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

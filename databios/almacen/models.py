@@ -15,3 +15,14 @@ class Product(models.Model):
     def __str__(self):
         return self.nombre
 
+class itemCar(models.Model):
+    producto = models.ForeignKey(Product,on_delete=models.CASCADE)
+    cantidad = models.IntegerField(default=1)
+
+class ShoppingCar(models.Model):
+    items=models.ForeignKey(itemCar,on_delete=models.CASCADE)
+
+
+
+
+

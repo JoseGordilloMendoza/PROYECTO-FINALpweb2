@@ -12,6 +12,3 @@ def catalogo(request):
       'categorias': categorias,
     }
     return render(request, 'catalogo.html', context)
-
-def filtroCategoria(request):
-    return render(request, 'categorias.html')

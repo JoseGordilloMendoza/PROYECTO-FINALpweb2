@@ -1,16 +1,10 @@
-function toggleMenu() {
-    var dropdownContent = document.getElementById("myDropdown");
-    dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownMenus = document.querySelectorAll(".categories__item");
 
-window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.style.display === "block") {
-                openDropdown.style.display = "none";
-            }
-        }
-    }
-}
+  dropdownMenus.forEach((menu) => {
+    menu.addEventListener("click", function () {
+      const dropdown = this.querySelector(".header__menu__dropdown");
+      dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+    });
+  });
+});

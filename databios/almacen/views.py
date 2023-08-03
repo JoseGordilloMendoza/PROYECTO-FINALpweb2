@@ -16,3 +16,24 @@ def catalogo(request):
 
 def inicioView(request):
     return render(request, 'inicio.html')
+
+def filtroproductosView(request):
+    return render(request, 'filtroproductos.html')
+
+def detalletiendaView(request):
+    return render(request, 'detalletienda.html')
+
+def carritoView(request):
+    return render(request, 'carrito.html')
+
+def detallesBlogView(request):
+    return render(request, 'detallesBlog.html')
+
+def verificacionView(request):
+    return render(request, 'verificacion.html')
+
+def blogView(request):
+    return render(request, 'blog.html')
+
+def contactoView(request):
+    return render(request, 'contacto.html')

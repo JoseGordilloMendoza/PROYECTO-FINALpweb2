@@ -7,6 +7,43 @@ header {
     padding: 10px 0;
     z-index: 100; 
 }
+:root{
+  --pink:#1d79c4;
+}
+
+*{
+  margin:0; padding:0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+section{
+  padding:2rem 9%;
+}
+
+.heading{
+  text-align: center;
+  font-size: 4rem;
+  color:rgb(9, 182, 212);
+  padding:1rem;
+  margin:2rem 0;
+  background:rgb(255, 255, 255);
+}
+
+.heading span{
+  color:var(--pink);
+}
 
 header .logo {
     font-size: 3rem;

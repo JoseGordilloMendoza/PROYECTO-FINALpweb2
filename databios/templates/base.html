@@ -15,11 +15,16 @@
         <header>
             <div class="header-container">
                 <div class="logo">
-                    <img src="{% static 'img/logo.png' %}" alt="Logo de la empresa">
+                    <img src="{% static 'images/logo.png' %}" alt="Logo de la empresa">
                 </div>
-                <div class="search">
-                    <input type="text" placeholder="Buscar...">
-                    <i class="fas fa-search"></i>
+                <div class="logo">
+                    <a class="logol">@DataBios<span>.</span></a>
+                </div>
+                <div class="search-container">
+                    <div class="search">
+                        <input type="text" placeholder="Buscar...">
+                        <i class="fas fa-search"></i>
+                    </div>
                 </div>
                 <div class="menu">
                     <div class="dropdown">
@@ -39,12 +44,12 @@
                         <a href="#" class="login-button">Iniciar Sesión</a>
                     </div>
                 </div>
-
                 <div class="cart">
                     <i class="fas fa-shopping-cart"></i>
                 </div>
             </div>
         </header>
+        
 
     <main>
         {% block content %}{% endblock %}

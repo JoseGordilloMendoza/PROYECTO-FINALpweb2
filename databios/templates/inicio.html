@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}@DataBios.{% endblock %}
-{% block extra_css %}<link rel="stylesheet" type="text/css" href="{% static 'css/inicio.css' %}">{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/inicio.css' %}">
+{% endblock %}
 
 {% block content %}
-<!-- home section starts  -->
 <section class="home" id="home">
     
     <div class="content">
@@ -25,7 +26,7 @@
     <div class="row">
 
         <div class="video-container">
-            <video src="images/about-vid.mp4" loop autoplay muted></video>
+            <video src="{% static 'images/about-vid.mp4' %}" loop autoplay muted></video>
             <h3>Lo mejor de lo mejor!</h3>
         </div>
 
@@ -45,7 +46,7 @@
 <section class="icons-container">
 
     <div class="icons">
-        <img src="images/icon-1.png" alt="">
+        <img src="{% static 'images/icon-1.png' %}" alt="">
         <div class="info">
             <h3>Entrega Gratis</h3>
             <span>En Todos Los Pedidos</span>
@@ -53,7 +54,7 @@
     </div>
 
     <div class="icons">
-        <img src="images/icon-2.png" alt="">
+        <img src="{% static 'images/icon-2.png' %}" alt="">
         <div class="info">
             <h3>10 dias devoluciones</h3>
             <span>Garantia De Reembolso</span>
@@ -61,7 +62,7 @@
     </div>
 
     <div class="icons">
-        <img src="images/icon-3.png" alt="">
+        <img src="{% static 'images/icon-3.png' %}" alt="">
         <div class="info">
             <h3>Oferta y Regalos</h3>
             <span>En Todos Los Pedidos</span>
@@ -69,7 +70,7 @@
     </div>
 
     <div class="icons">
-        <img src="images/icon-4.png" alt="">
+        <img src="{% static 'images/icon-4.png' %}" alt="">
         <div class="info">
             <h3>Pagos Seguros</h3>
             <span>Protegido Por Paypal</span>
@@ -78,162 +79,6 @@
    
 </section>
 <!-- icons section ends -->
-
-<!-- prodcuts section starts  -->
-<section class="products" id="products">
-
-    <h1 class="heading"> Últimos <span>Productos</span> </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <span class="discount">-10%</span>
-            <div class="image">
-                <img src="images/img-1.jpg" alt="">
-                <div class="icons">
-                    <a href="#products" class="fas fa-heart"></a>
-                    <a href="#products" class="cart-btn">Añadir Al Carrito</a>
-                    <a href="#products" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Audifono Gamer MSI</h3>
-                <div class="price"> S/129.90 <span>S/159.90</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <span class="discount">-15%</span>
-            <div class="image">
-                <img src="images/img-2.jpg" alt="">
-                <div class="icons">
-                    <a href="#products" class="fas fa-heart"></a>
-                    <a href="#products" class="cart-btn">Añadir Al Carrito</a>
-                    <a href="#products" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Estuche de 60 plumones FF.CC.</h3>
-                <div class="price"> S/45.00 <span>S/55.00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <span class="discount">-5%</span>
-            <div class="image">
-                <img src="images/img-3.jpg" alt="">
-                <div class="icons">
-                    <a href="#products" class="fas fa-heart"></a>
-                    <a href="#products" class="cart-btn">Añadir Al Carrito</a>
-                    <a href="#products" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Juego de Archivadores</h3>
-                <div class="price"> S/15.90 <span>S/18.90</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <span class="discount">-20%</span>
-            <div class="image">
-                <img src="images/img-4.jpg" alt="">
-                <div class="icons">
-                    <a href="#products" class="fas fa-heart"></a>
-                    <a href="#products" class="cart-btn">Añadir Al Carrito</a>
-                    <a href="#products" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Mouse Gamer</h3>
-                <div class="price"> S/72.90 <span>S/78.90</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <span class="discount">-17%</span>
-            <div class="image">
-                <img src="images/img-5.jpg" alt="">
-                <div class="icons">
-                    <a href="#products" class="fas fa-heart"></a>
-                    <a href="#products" class="cart-btn">Añadir Al Carrito</a>
-                    <a href="#products" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Cuadernos Anillados</h3>
-                <div class="price"> S/15.90 <span>S/19.90</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <span class="discount">-3%</span>
-            <div class="image">
-                <img src="images/img-6.jpg" alt="">
-                <div class="icons">
-                    <a href="#products" class="fas fa-heart"></a>
-                    <a href="#products" class="cart-btn">Añadir Al Carrito</a>
-                    <a href="#products" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Variedad de Gomas</h3>
-                <div class="price"> S/4.50 <span>S/5.50</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <span class="discount">-18%</span>
-            <div class="image">
-                <img src="images/img-7.jpg" alt="">
-                <div class="icons">
-                    <a href="#products" class="fas fa-heart"></a>
-                    <a href="#products" class="cart-btn">Añadir Al Carrito</a>
-                    <a href="#products" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Teclado Gamer Halion</h3>
-                <div class="price"> S/98.00 <span>S/115.00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <span class="discount">-20%</span>
-            <div class="image">
-                <img src="images/img-8.jpg" alt="">
-                <div class="icons">
-                    <a href="#products" class="fas fa-heart"></a>
-                    <a href="#products" class="cart-btn">Añadir Al Carrito</a>
-                    <a href="#products" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Paquete de Papel Bond REPORT</h3>
-                <div class="price"> S/18.00 <span>S/15.00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <span class="discount">-5%</span>
-            <div class="image">
-                <img src="images/img-9.jpg" alt="">
-                <div class="icons">
-                    <a href="#products" class="fas fa-heart"></a>
-                    <a href="#products" class="cart-btn">Añadir Al Carrito</a>
-                    <a href="#products" class="fas fa-share"></a>
-                </div>
-            </div>
-            <div class="content">
-                <h3>Juego de Reglas y lapiceros</h3>
-                <div class="price"> S/4.90 <span>S/6.90</span> </div>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-<!-- prodcuts section ends -->
 
 
 <!-- review section starts  -->
@@ -253,7 +98,7 @@
             </div>
             <p>La entrega de los productos es puntual y de manera cuidadosa, ya que cada uno de estos viene bien empaquetado. Ademas, que si cumple la fecha determinada. Ya que cada uno de estos viene bien empaquetado.</p>
             <div class="user">
-                <img src="images/pic-1.png" alt="">
+                <img src="{% static 'images/pic-1.png' %}" alt="">
                 <div class="user-info">
                     <h3>Luis Enrique</h3>
                     <span>Cliente Feliz</span>
@@ -272,7 +117,7 @@
             </div>
             <p>Cada producto que se ofrece es de suma calidad y con una buena garantia, hasta ahora no tuve problemas tampoco con el sistema de pagos, porque automaticamente reconocia el dinero y ya realizaba la compra del producto.</p>
             <div class="user">
-                <img src="images/pic-2.png" alt="">
+                <img src="{% static 'images/pic-2.png' %}" alt="">
                 <div class="user-info">
                     <h3>Maria L.</h3>
                     <span>Cliente Feliz</span>
@@ -289,7 +134,7 @@
             </div>
             <p>Hasta ahora solo realice un pedido, espero y como las demas personas aceptan que es una buena empresa y su sistema no fala, la mia no sea una excepcion. Espero el pedido en su fecha exacta. Ahi recien le pondre 5 estrellas.</p>
             <div class="user">
-                <img src="images/pic-3.png" alt="">
+                <img src="{% static 'images/pic-3.png' %}" alt="">
                 <div class="user-info">
                     <h3>Jorge</h3>
                     <span>Cliente Feliz</span>
@@ -301,28 +146,6 @@
     </div> 
     </section>
     <!-- review section ends -->
+
     
-    <!-- contact section starts  -->
-    <section class="contact" id="contact">
-    
-        <h1 class="heading"> <span> Contáct</span>enos </h1>
-    
-        <div class="row">
-    
-            <form action="">
-                <input type="text" placeholder="Ingrese su Nombre" class="box">
-                <input type="email" placeholder="Ingrese su email" class="box">
-                <input type="number" placeholder="Ingrese su Numero de Celular" class="box">
-                <textarea name="" class="box" placeholder="Escriba el Mensaje" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="Enviar Mensaje" class="btn">
-            </form>
-    
-            <div class="image">
-                <img src="images/contact-img.png" alt="">
-            </div>
-    
-        </div>
-    
-    </section>
-    <!-- contact section ends -->
 {% endblock %}

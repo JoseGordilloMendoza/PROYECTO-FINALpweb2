@@ -8,6 +8,19 @@ header {
     z-index: 100; 
 }
 
+header .logo {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    text-align: center;
+  }
+  
+header .logo span{
+    color:var(--pink);
+}
+
+
+
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -16,6 +29,12 @@ header {
     align-items: center;
 }
   
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
   .logo img {
     height: 60px;
     margin-right: 10px;
@@ -29,6 +48,7 @@ header {
   
   .search {
     display: flex;
+    justify-content: center;
     align-items: center;
     border: 1px solid #f8f8f8;
     border-radius: 20px;
@@ -48,6 +68,7 @@ header {
   
   .fa-search {
     margin-left: 5px;
+    
     color: #555;
   }
   
@@ -157,6 +178,8 @@ header {
 
 main {
     padding: 20px;
+    background-color: #d8d8d8; 
+
 }
 
 footer {

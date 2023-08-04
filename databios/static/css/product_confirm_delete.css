@@ -1,0 +1,50 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilos para el encabezado h2 */
+h2 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el párrafo */
+p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el formulario de confirmación de eliminación */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+form input[type="submit"] {
+    background-color: #FF3333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #E60000;
+}
+
+/* Estilos para el csrf_token */
+form input[name="csrfmiddlewaretoken"] {
+    display: none;
+}

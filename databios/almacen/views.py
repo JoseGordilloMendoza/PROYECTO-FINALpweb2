@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from .models import Product,Categoria
+from rest_framework import generics
+from .serializer import ProductSerializer
 from django.urls import reverse_lazy
 
 
 def homeView(request):
-  return render(request, 'index.html')
+    categorias = Categoria.objects.all()
+    context={'categorias':categorias}
+    return render(request, 'index.html',context)
 
 def catalogo(request):
   obj = Product.objects.all()
@@ -15,30 +19,6 @@ def catalogo(request):
     'categorias': categorias,
     }
   return render(request, 'catalogo.html', context)
-
-def inicioView(request):
-    return render(request, 'inicio.html')
-
-def filtroproductosView(request):
-    return render(request, 'filtroproductos.html')
-
-def detalletiendaView(request):
-    return render(request, 'detalletienda.html')
-
-def carritoView(request):
-    return render(request, 'carrito.html')
-
-def detallesBlogView(request):
-    return render(request, 'detallesBlog.html')
-
-def verificacionView(request):
-    return render(request, 'verificacion.html')
-
-def blogView(request):
-    return render(request, 'blog.html')
-
-def contactoView(request):
-    return render(request, 'contacto.html')
 
 class ProductCreateView(CreateView):
     model = Product
@@ -87,3 +67,15 @@ class ProductDeleteView(DeleteView):
     def form_valid(self, form):
         # Realiza acciones adicionales antes de eliminar el producto (opcional)
         return super().form_valid(form)
+    
+class ProductAPI(generics.ListAPIView):
+    serializer_class = ProductSerializer
+    
+    def get_queryset(self):
+        categorias_especificas = self.request.query_params.getlist('categorias')
+        queryset = Product.objects.all()
+
+        for categoria in categorias_especificas:
+            queryset = queryset.filter(categorias__nombre=categoria)
+
+        return queryset

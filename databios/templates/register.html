@@ -2,28 +2,30 @@
 <html>
 <head>
     <title>Registro de cuenta</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/register.css">
 </head>
 <body>
 
-    <h1 class="titLoginRegister" align="center">REGISTRAR</h1>
+    <div class="form-container">
+        <h1>REGISTRAR</h1>
 
-    <form action="/register/" method="post">
-        {% csrf_token %}
+        <form action="/register/" method="post">
+            {% csrf_token %}
 
-        <input type="text" name="first_name" placeholder="Ingresa tus nombres"><br>
-        <input type="text" name="last_name" placeholder="Ingresa Apellidos"><br>
-        <input type="text" name="username" placeholder="Tu usuario: "><br>
-        <input type="email" name="email" placeholder="Correo: "><br>
-        <input type="password" name="password1" placeholder="Contraseña"><br>
-        <input type="password" name="password2" placeholder="Vuelve a escribir la contraseña"><br>
-        <input type="Submit" value="Registrarme">
+            <input type="text" name="first_name" placeholder="Ingresa tus nombres"><br>
+            <input type="text" name="last_name" placeholder="Ingresa Apellidos"><br>
+            <input type="text" name="username" placeholder="Tu usuario: "><br>
+            <input type="email" name="email" placeholder="Correo: "><br>
+            <input type="password" name="password1" placeholder="Contraseña"><br>
+            <input type="password" name="password2" placeholder="Vuelve a escribir la contraseña"><br>
+            <input type="submit" value="Registrarme">
+        </form>
 
-    </form>
-
-    <div>
-        {% for message in messages %}
-        <h3> {{message}}  </h3>
-        {% endfor %}
+        <div>
+            {% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
+        </div>
     </div>
 
 </body>

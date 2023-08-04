@@ -1,5 +1,5 @@
 function obtenerCategory(element) {
-  var selected = element.innerText;
+  let selected = element.options[element.selectedIndex].text;
   console.log(selected);
 
   apiUrl = '/api/?';
@@ -17,19 +17,18 @@ function toHtml(data) {
 
   data.forEach(element => {
     texto += `
-    <div class="col-lg-4 col-md-6 col-sm-6">
-      <div class="product__item">
-        <div class="product__item__pic set-bg">
-          <img src="${element.imagen}" alt="${element.nombre}">
-        </div>
-        <div class="product__item__text">
-          <h6><a href="#">${element.nombre}</a></h6>
-          <h5>$${element.precio}</h5>
-        </div>
+    <div class="product">
+      <div class="img-container">
+        <img src='${element.imagen}' alt='${element.nombre}' class="product-image">
       </div>
+      <h1 class="product-title">${element.nombre}</h1>
+      <h2 class="product-description">{{ obj.descripcion }}</h2>
+      <h2>Stock: ${element.stock}</h2>
+      <h1 class="product-price">Precio: S/${element.precio}</h1>
+      <button class="buy-button">COMPRAR</button>
     </div>
     `
   });
-  div = document.querySelector('.products__container');
+  div = document.querySelector('.products-container');
   div.innerHTML = texto;
 }

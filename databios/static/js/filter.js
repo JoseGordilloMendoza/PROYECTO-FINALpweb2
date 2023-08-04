@@ -11,7 +11,7 @@ function obtenerCategory(element) {
      return response.json()}).then(data => {console.log(data);
      toHtml(data)});
 }
-hj
+
 function toHtml(data) {
   texto = ''
 
@@ -25,10 +25,15 @@ function toHtml(data) {
       <h2 class="product-description">${element.descripcion}</h2>
       <h2>Stock: ${element.stock}</h2>
       <h1 class="product-price">Precio: S/${element.precio}</h1>
-      <button class="buy-button">VER MAS</button>
+      <button class="buy-button" onclick="redirectToDetalleProduct( ${element.id} )">VER MAS</button>
     </div>
+    
     `
   });
   div = document.querySelector('.products-container');
   div.innerHTML = texto;
+}
+
+function redirectToDetalleProduct(id) {
+  window.location.href = '/detalle/' + id + '/';
 }

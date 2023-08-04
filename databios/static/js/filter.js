@@ -25,7 +25,7 @@ function toHtml(data) {
       <h2 class="product-description">${element.descripcion}</h2>
       <h2>Stock: ${element.stock}</h2>
       <h1 class="product-price">Precio: S/${element.precio}</h1>
-      <button class="buy-button">COMPRAR</button>
+      <button class="buy-button">VER MAS</button>
     </div>
     `
   });

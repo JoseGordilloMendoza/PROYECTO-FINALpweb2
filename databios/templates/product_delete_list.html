@@ -1,12 +1,32 @@
-<h1>ELIGE EL PRODUCTO A ELIMINAR</h1>
 
-   <ul>
-    {% for product in products %}
-      <li>
-        {{ product.nombre }}
-        <a href="{% url 'product_delete' product.pk %}">Eliminar</a>
-      </li>
-    {% endfor %}
-    <a href="/">Inicio</a>
-  </ul>
   
+
+{% load static %}
+
+
+<!-- product_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Producto</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/product_delete_list.css' %}">
+</head>
+<body>
+  <h1>ELIGE EL PRODUCTO A ELIMINAR</h1>
+
+  <ul>
+   {% for product in products %}
+     <li>
+       {{ product.nombre }}
+       <a href="{% url 'product_delete' product.pk %}">Eliminar</a>
+     </li>
+   {% endfor %}
+   <a href="http://127.0.0.1:8000/">Inicio</a>
+ </ul>
+ 
+
+</form>
+</form>
+</body>
+</html>

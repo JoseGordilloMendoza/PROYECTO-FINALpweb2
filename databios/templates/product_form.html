@@ -1,6 +1,20 @@
+{% load static %}
+
+
 <!-- product_form.html -->
-<form method="post" enctype="multipart/form-data">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Producto</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/product_form.css' %}">
+</head>
+<body>
+    <!-- product_form.html -->
+    <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Guardar">
 </form>
+</body>
+</html>

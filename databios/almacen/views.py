@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from .models import Product,Categoria
 from rest_framework import generics
@@ -79,3 +79,7 @@ class ProductAPI(generics.ListAPIView):
             queryset = queryset.filter(categorias__nombre=categoria)
 
         return queryset
+
+def detalleProduct(request, id):
+    product = get_object_or_404(Product, pk=id)
+    return render(request, 'detalleProduct.html', {'product': product})

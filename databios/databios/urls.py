@@ -20,6 +20,7 @@ urlpatterns = [
     path('product/<int:pk>/delete/', ProductDeleteView.as_view(), name='product_delete'),
     path('catalogo/', catalogo, name='productos'),
     path('', include('almacen.urls')),
+    path('detalle/<int:id>/', detalleProduct, name='detalle_product'),
 
 
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)   

@@ -91,11 +91,16 @@
                 <h2 class="product-description">{{ obj.descripcion }}</h2>
                 <h2>Stock: {{ obj.stock }}</h2>
                 <h1 class="product-price">Precio: S/{{ obj.precio }}</h1>
-                <button class="buy-button">COMPRAR</button>
+                <button class="buy-button" onclick="redirectToDetalleProduct( {{ obj.id }} )">VER MAS</button>            
             </div>
         {% endfor %}
     </main>
 </div>
+<script>
+    function redirectToDetalleProduct(id) {
+        window.location.href = '/detalle/' + id + '/';
+    }
+</script>
 
 <script src="{% static 'js/filter.js' %}"></script>
 

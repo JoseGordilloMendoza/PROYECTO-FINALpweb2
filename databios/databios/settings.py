@@ -108,6 +108,4 @@ EMAIL_HOST_PASSWORD = 'gtnjvkvnwjngjwhl' # Contraseña de aplicacion
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-AUTH_USER_MODEL = 'account.CustomUser'
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

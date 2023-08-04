@@ -1,0 +1,9 @@
+<!-- product_list.html -->
+<h1>ELIGE EL PRODUCTO A EDITAR</h1>
+<ul>
+    {% for product in products %}
+      <li><a href="{% url 'product_edit' product.pk %}">{{ product.nombre }}</a></li>
+    {% endfor %}
+    <a href="http://127.0.0.1:8000/">Inicio</a>
+
+</ul>

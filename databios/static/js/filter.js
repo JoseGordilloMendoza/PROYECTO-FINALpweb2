@@ -22,7 +22,7 @@ function toHtml(data) {
         <img src='${element.imagen}' alt='${element.nombre}' class="product-image">
       </div>
       <h1 class="product-title">${element.nombre}</h1>
-      <h2 class="product-description">{{ obj.descripcion }}</h2>
+      <h2 class="product-description">${element.descripcion}</h2>
       <h2>Stock: ${element.stock}</h2>
       <h1 class="product-price">Precio: S/${element.precio}</h1>
       <button class="buy-button">COMPRAR</button>

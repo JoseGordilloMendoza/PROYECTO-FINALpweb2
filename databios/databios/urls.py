@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from almacen.views import homeView,catalogo, ProductDeleteView,ProductCreateView,ProductUpdateView, product_list, product_delete_list
 from django.conf import settings
 from django.conf.urls.static import static
@@ -27,6 +27,7 @@ urlpatterns = [
     path('verificacion/', verificacionView, name='verificacion'),
     path('blog/', blogView, name='blog'),
     path('contacto/', contactoView, name='contacto'),
+    path('', include('almacen.urls')),
 
 
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)   

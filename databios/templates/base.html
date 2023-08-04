@@ -101,29 +101,24 @@
                         <div class="header__top__left">
                             <ul>
                                 <li><i class="fa fa-envelope"></i> databios2023@gmail.com</li>
-                                <li>Envío gratis para todos los pedidos > a S/100.00</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__right">
                             <div class="header__top__right__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                            </div>
-                            <div class="header__top__right__language">
-                                <img src="{% static 'imagenes/language.png' %}" alt="">
-                                <div>English</div>
-                                <span class="arrow_carrot-down"></span>
-                                <ul>
-                                    <li><a href="#">Spanis</a></li>
-                                    <li><a href="#">English</a></li>
-                                </ul>
+                                <a href="https://www.facebook.com/Databios1/"><i class="fa fa-facebook"></i></a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                                {% if user.is_authenticated %}
+                                    <a href="http://127.0.0.1:8000/logout/"><i class="fa fa-user"></i>Logout</a>
+                                    <p>Bienvenido, {{ user.username }}</p>
+                                {% else %}
+                                <a href="http://127.0.0.1:8000/login/"><i class="fa fa-user"></i>Login</a>
+                                <a href="http://127.0.0.1:8000/register/"><i class="fa fa-user"></i>Register</a>
+                                {% endif %}
+
+                                
                             </div>
                         </div>
                     </div>

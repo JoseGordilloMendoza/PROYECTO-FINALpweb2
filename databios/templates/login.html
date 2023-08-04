@@ -1,22 +1,28 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Iniciar sesión</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css">
 </head>
 <body>
 
-    <h1 class="titLoginRegister" align="center">INGRESAR</h1>
+    <div class="container">
+        <h1 class="titLoginRegister">INGRESAR</h1>
 
-    <form action="/login/" method="post">
-        {% csrf_token %}
-        <input type="text" name="username" placeholder="Usuario"><br>
-        <input type="password" name="password" placeholder="Contraseña"><br>
-        <input type="Submit" value="Sign in">
-    </form>
+        <form action="/login/" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Usuario">
+            <input type="password" name="password" placeholder="Contraseña">
+            <input type="Submit" value="Sign in">
+        </form>
 
-    <div>
+        <div class="message">
             {% for message in messages %}
-            <h3> {{message}}  </h3>
+                <h3>{{ message }}</h3>
             {% endfor %}
+        </div>
     </div>
+
+</body>
 </html>

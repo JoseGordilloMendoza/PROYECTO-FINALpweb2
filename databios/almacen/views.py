@@ -40,6 +40,8 @@ def blogView(request):
 def contactoView(request):
     return render(request, 'contacto.html')
 
+
+
 class ProductCreateView(CreateView):
     model = Product
     fields = ['categorias', 'nombre', 'descripcion', 'precio', 'imagen', 'stock']

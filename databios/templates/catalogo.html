@@ -51,12 +51,22 @@
             <div class="col-lg-6">
                 <nav class="header__menu">
                     <ul>
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="/catalogo/">Tienda</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li class="active"><a href="/catalogo/">Tienda</a></li>
                         {% if user.is_superuser %}
-                                <a href="/product/create/" class="login-button">CREAR</a>
-                                <a href="/product/list/" class="login-button">ACTUALIZAR</a>
-                                <a href="/product/delete/list/" class="login-button">ELIMINAR</a>
+                        <li>
+                            <a href="/product/create/" class="login-button">CREAR</a>
+
+                        </li>
+                        <li>
+                            <a href="/product/list/" class="login-button">ACTUALIZAR</a>
+
+                        </li>
+                        <li>
+
+                            <a href="/product/delete/list/" class="login-button">ELIMINAR</a>
+
+                        </li>
                                 {% endif %}
                     </ul>
                 </nav>

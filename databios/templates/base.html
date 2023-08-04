@@ -62,22 +62,6 @@
             </div>
         </div>
 
-        <nav class="humberger__menu__nav mobile-menu">
-            <ul>
-                <li class="active"><a href="{% url 'inicio' %}">Inicio</a></li>
-                <li><a href="{% url 'filtroproductos' %}">Comprar</a></li>
-                <li><a href="#">Paginas</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="{% url 'detalletienda' %}">Detalles Tienda</a></li>
-                        <li><a href="{% url 'carrito' %}">Mi Carrito</a></li>
-                        <li><a href="{% url 'verificacion' %}">Verificacion</a></li>
-                        <li><a href="{% url 'detallesBlog' %}">Blog</a></li>
-                    </ul>
-                </li>
-                <li><a href="{% url 'blog' %}">Blog</a></li>
-                <li><a href="{% url 'contacto' %}">Contacto</a></li>
-            </ul>
-        </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="header__top__right__social">
             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -110,11 +94,11 @@
                             </div>
                             <div class="header__top__right__auth">
                                 {% if user.is_authenticated %}
-                                    <a href="http://127.0.0.1:8000/logout/"><i class="fa fa-user"></i>Logout</a>
+                                    <a href="/logout/"><i class="fa fa-user"></i>Logout</a>
                                     <p>Bienvenido, {{ user.username }}</p>
                                 {% else %}
-                                <a href="http://127.0.0.1:8000/login/"><i class="fa fa-user"></i>Login</a>
-                                <a href="http://127.0.0.1:8000/register/"><i class="fa fa-user"></i>Register</a>
+                                <a href="/login/"><i class="fa fa-user"></i>Login</a>
+                                <a href="/register/"><i class="fa fa-user"></i>Register</a>
                                 {% endif %}
 
                                 
@@ -128,27 +112,18 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="{% url 'inicio' %}"><img src="{% static 'imagenes/logo.png' %}" alt=""></a>
+                        <a href="/"><img src="{% static 'imagenes/logo.png' %}" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="http://127.0.0.1:8000/">Home</a></li>
-                            <li><a href="http://127.0.0.1:8000/catalogo/">Tienda</a></li>
-                            <li><a href="#">Paginas</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="{% url 'detalletienda' %}">Detalles Tienda</a></li>
-                                    <li><a href="{% url 'carrito' %}">Mi Carrito</a></li>
-                                    <li><a href="{% url 'verificacion' %}">Verificacion</a></li>
-                                    <li><a href="{% url 'detallesBlog' %}">Blog</a></li>
-                                    
-                                </ul>
-                            </li>
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="/catalogo/">Tienda</a></li>
                             {% if user.is_superuser %}
-                                    <a href="http://127.0.0.1:8000/product/create/" class="login-button">CREAR</a>
-                                    <a href="http://127.0.0.1:8000/product/list/" class="login-button">ACTUALIZAR</a>
-                                    <a href="http://127.0.0.1:8000/product/delete/list/" class="login-button">ELIMINAR</a>
+                                    <a href="/product/create/" class="login-button">CREAR</a>
+                                    <a href="/product/list/" class="login-button">ACTUALIZAR</a>
+                                    <a href="/product/delete/list/" class="login-button">ELIMINAR</a>
                                     {% endif %}
                         </ul>
                     </nav>
@@ -172,14 +147,9 @@
                             <span>CATEGORIAS</span>
                         </div>
                         <ul>
-                            <li><a href="#">Utiles Escolares</a></li>
-                            <li><a href="#">Utiles de Oficina</a></li>
-                            <li><a href="#">Equipos Gamers</a></li>
-                            <li><a href="#">Regalos</a></li>
-                            <li><a href="#">Juguetes</a></li>
-                            <li><a href="#">Papeleria</a></li>
-                            <li><a href="#">Arte y Diseño</a></li>
-                            <li><a href="#">Cuidado personal y de limpieza</a></li>
+                            {% for categoria in categorias %}
+                            <li><a href="/catalogo/" value="{{ categoria.nombre }}">{{ categoria.nombre }}</li>
+                            {% endfor %} 
                         </ul>
                     </div>
                 </div>
@@ -200,7 +170,7 @@
                             <span>Chala 2023</span>
                             <h2> Libreria<br /> DATABIOS</h2>
                             <p><strong>Somos una empresa 100% peruana, proveedora de <br /> utiles de oficina, productos de limpieza, tecnologia, <br />y demas productos y servicios especializados para empresas.</strong></p>
-                            <a href="http://127.0.0.1:8000/register/catalogo" class="primary-btn">COMPRAR AHORA</a>
+                            <a href="/catalogo/" class="primary-btn">COMPRAR AHORA</a>
                         </div>
                     </div>
                     {% endblock %}

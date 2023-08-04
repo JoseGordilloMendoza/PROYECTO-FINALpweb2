@@ -7,7 +7,9 @@ from django.urls import reverse_lazy
 
 
 def homeView(request):
-  return render(request, 'index.html')
+    categorias = Categoria.objects.all()
+    context={'categorias':categorias}
+    return render(request, 'index.html',context)
 
 def catalogo(request):
   obj = Product.objects.all()
@@ -17,31 +19,6 @@ def catalogo(request):
     'categorias': categorias,
     }
   return render(request, 'catalogo.html', context)
-
-def inicioView(request):
-    return render(request, 'inicio.html')
-
-def filtroproductosView(request):
-    categories = Categoria.objects.all()
-    return render(request, 'filtroproductos.html', {'categories': categories})
-
-def detalletiendaView(request):
-    return render(request, 'detalletienda.html')
-
-def carritoView(request):
-    return render(request, 'carrito.html')
-
-def detallesBlogView(request):
-    return render(request, 'detallesBlog.html')
-
-def verificacionView(request):
-    return render(request, 'verificacion.html')
-
-def blogView(request):
-    return render(request, 'blog.html')
-
-def contactoView(request):
-    return render(request, 'contacto.html')
 
 class ProductCreateView(CreateView):
     model = Product

@@ -15,7 +15,7 @@
             <h1>Tienda de Útiles Escolares y de Oficina</h1>
         </header>
         <p>Filtrar por categoría:</p>
-        <select id="opcion" onchange="obtenerSelect(this)">
+        <select id="opcion" onchange="obtenerCategory(this)">
             <option value="Todos">Todos</option>
             {% for categoria in categorias %}
                 <option value="{{ categoria.nombre }}">{{ categoria.nombre }}</option>
@@ -37,5 +37,7 @@
         {% endfor %}
     </main>
 </div>
+
+<script src="{% static 'js/filter.js' %}"></script>
 
 {% endblock %}

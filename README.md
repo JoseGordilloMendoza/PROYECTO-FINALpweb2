@@ -65,6 +65,9 @@ ALejandro Phocco
 | nombre        | Char(100)   | No   | No   | Null           | Nombre de la categoría    |
 
 ## Diagrama Entidad-Relación
+
+![Diagrama Entidad-Relacion](ImagenesReadme/DEA.png)
+
 ## Administración con Django
 ## Plantillas Bootstrap
 ## CRUD - Core Business - Clientes finales

@@ -37,3 +37,13 @@
 
 3. **Seguridad:**
    - La seguridad debe ser una prioridad, especialmente en el sistema de inicio de sesión del administrador.
+
+
+| Atributo      | Tipo        | Nulo | Clave | Predeterminado | Descripción                       |
+|---------------|-------------|------|------|----------------|-----------------------------------|
+| id            | Entero      | No   | Sí   | Ninguno        | Clave primaria                    |
+| nombre        | Char(100)   | No   | No   | Null           | Nombre de la categoría            |
+| descripcion   | Texto       | No   | No   | Null           | Descripción del producto          |
+| precio        | Entero      | No   | No   | Null           | Precio del producto               |
+| imagen        | Imagen      | Sí   | No   | Null           | Ruta de la imagen asociada al producto|
+| stock         | Entero      | No   | No   | Null           | Cantidad en stock del producto    |

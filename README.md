@@ -7,7 +7,6 @@
 #### ALejandro Phocco
 
 ## Tipo de Sistema
-## Requisitos del sistema
 
 1. **Inicio de sesión:**
    - La página web debe tener un sistema de inicio de sesión para diferenciar al administrador del usuario.

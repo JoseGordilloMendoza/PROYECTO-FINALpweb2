@@ -1,10 +1,13 @@
 # PROYECTO-FINALpweb2
-## Rommel Chambi
-## Ower Lopez
-## Jose Gordillo
-## ALejandro Phocco
 
-### Requerimientos Funcionales:
+## Integrantes
+Rommel Chambi
+Ower Lopez
+Jose Gordillo
+ALejandro Phocco
+
+## Tipo de Sistema
+## Requisitos del sistema
 
 1. **Inicio de sesión:**
    - La página web debe tener un sistema de inicio de sesión para diferenciar al administrador del usuario.
@@ -38,6 +41,12 @@
 3. **Seguridad:**
    - La seguridad debe ser una prioridad, especialmente en el sistema de inicio de sesión del administrador.
 
+## Modelo de datos
+
+
+## Diccionario de datos
+
+### Producto
 
 | Atributo      | Tipo        | Nulo | Clave | Predeterminado | Descripción                       |
 |---------------|-------------|------|------|----------------|-----------------------------------|
@@ -47,3 +56,24 @@
 | precio        | Entero      | No   | No   | Null           | Precio del producto               |
 | imagen        | Imagen      | Sí   | No   | Null           | Ruta de la imagen asociada al producto|
 | stock         | Entero      | No   | No   | Null           | Cantidad en stock del producto    |
+
+### Categoria
+
+| Atributo      | Tipo        | Nulo | Clave | Predeterminado | Descripción               |
+|---------------|-------------|------|------|----------------|---------------------------|
+| id            | Entero      | No   | Sí   | Ninguno        | Clave primaria            |
+| nombre        | Char(100)   | No   | No   | Null           | Nombre de la categoría    |
+
+## Diagrama Entidad-Relación
+## Administración con Django
+## Plantillas Bootstrap
+## CRUD - Core Business - Clientes finales
+## Servicios mediante una API RESTful
+## Operaciones asíncronas AJAX
+## Investigación: Email, Upload.
+
+
+
+
+
+

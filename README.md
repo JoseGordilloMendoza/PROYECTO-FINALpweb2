@@ -1,10 +1,10 @@
 # PROYECTO-FINALpweb2
 
 ## Integrantes
-Rommel Chambi
-Ower Lopez
-Jose Gordillo
-ALejandro Phocco
+#### Rommel Chambi
+#### Ower Lopez
+#### Jose Gordillo
+#### ALejandro Phocco
 
 ## Tipo de Sistema
 ## Requisitos del sistema
@@ -43,6 +43,8 @@ ALejandro Phocco
 
 ## Modelo de datos
 
+-Producto: Guardara la informacion de los productos de la tienda
+-Categoria: Solo guarda el nombre de la categoria
 
 ## Diccionario de datos
 
@@ -68,16 +70,16 @@ ALejandro Phocco
 
 ![Diagrama Entidad-Relacion](https://github.com/JoseGordilloMendoza/PROYECTO-FINALpweb2/blob/main/ImagenesReadme/DEA.png)
 
-## Administración con Django
-## Plantillas Bootstrap
-## CRUD - Core Business - Clientes finales
-## Servicios mediante una API RESTful
-## Operaciones asíncronas AJAX
 ## En el sistema, SI uso AJAX.
 
 Con uso de este script se hace una preticion get a la api para obtener informacion de los productos con las categorias deseadas.
 
+![Diagrama Entidad-Relacion](https://github.com/JoseGordilloMendoza/PROYECTO-FINALpweb2/blob/main/ImagenesReadme/jsAjax.png)
+
 Ejecucion
+
+![Diagrama Entidad-Relacion]([https://github.com/JoseGordilloMendoza/PROYECTO-FINALpweb2/blob/main/ImagenesReadme/jsAjax.png](https://github.com/JoseGordilloMendoza/PROYECTO-FINALpweb2/blob/main/ImagenesReadme/ajaxEjecucion.png))
+
 
 ## Todas las tablas tienen created, modify, user_id y status.
 

@@ -66,7 +66,7 @@ ALejandro Phocco
 
 ## Diagrama Entidad-Relación
 
-![Diagrama Entidad-Relacion]([ImagenesReadme/DEA.png](https://github.com/JoseGordilloMendoza/PROYECTO-FINALpweb2/blob/main/ImagenesReadme/DEA.png))
+![Diagrama Entidad-Relacion](https://github.com/JoseGordilloMendoza/PROYECTO-FINALpweb2/blob/main/ImagenesReadme/DEA.png)
 
 ## Administración con Django
 ## Plantillas Bootstrap

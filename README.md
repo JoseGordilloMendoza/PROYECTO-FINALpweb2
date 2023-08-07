@@ -78,7 +78,7 @@ Con uso de este script se hace una preticion get a la api para obtener informaci
 
 Ejecucion
 
-![Diagrama Entidad-Relacion]([https://github.com/JoseGordilloMendoza/PROYECTO-FINALpweb2/blob/main/ImagenesReadme/jsAjax.png](https://github.com/JoseGordilloMendoza/PROYECTO-FINALpweb2/blob/main/ImagenesReadme/ajaxEjecucion.png))
+![Diagrama Entidad-Relacion](https://github.com/JoseGordilloMendoza/PROYECTO-FINALpweb2/blob/main/ImagenesReadme/ajaxEjecucion.png)
 
 
 ## Todas las tablas tienen created, modify, user_id y status.

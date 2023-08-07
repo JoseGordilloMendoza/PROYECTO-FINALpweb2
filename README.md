@@ -73,8 +73,17 @@ ALejandro Phocco
 ## CRUD - Core Business - Clientes finales
 ## Servicios mediante una API RESTful
 ## Operaciones asíncronas AJAX
-## Investigación: Email, Upload.
+## En el sistema, SI uso AJAX.
 
+Con uso de este script se hace una preticion get a la api para obtener informacion de los productos con las categorias deseadas.
+
+Ejecucion
+
+## Todas las tablas tienen created, modify, user_id y status.
+
+Uso el modelo DetectChanges que se encargara de registar si una tabla ha sido modificada y guardara registro del usuario que realizo la accion
+
+![Diagrama Entidad-Relacion](https://github.com/JoseGordilloMendoza/PROYECTO-FINALpweb2/blob/main/ImagenesReadme/registroTablas.png)
 
 
 

@@ -27,6 +27,7 @@ class ProductCreateView(CreateView):
     success_url = '/'  # URL de redirección después de guardar un nuevo producto
 
     def form_valid(self, form):
+        form.instance.user = self.request.user
         # Guarda el objeto del formulario antes de añadir la relación muchos a muchos
         product = form.save()
 
@@ -65,6 +66,7 @@ class ProductDeleteView(DeleteView):
     success_url = reverse_lazy('product_list')  # URL de redirección después de eliminar un producto
 
     def form_valid(self, form):
+        form.instance.user = self.request.user
         # Realiza acciones adicionales antes de eliminar el producto (opcional)
         return super().form_valid(form)
     
